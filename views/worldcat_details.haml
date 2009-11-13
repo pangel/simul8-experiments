@@ -1,0 +1,41 @@
+%h2 
+  About #{@book[:title]}
+  - if @query
+    %span
+      = "..."
+      %a#back-to-results(href="/worldcat?query=#{@query}") Back to search results.
+
+#content
+  #book-details
+    %img#cover(src=@cover_url alt='The cover of the book')
+    %p#title= @book[:title]
+    %p#author= "By " + @book[:author].join(', ')
+    %a#wclink(href="#{@book[:link]}") Find the book on Worldcat
+    
+  %h3 Related books
+  %ul#related
+    %li
+      - if not @related.empty?
+        %ul#related-books
+          - @related.each do |book|
+            %li 
+              %a(href="/worldcat/#{book["asin"]}")= book["title"]
+      - else
+        No books found.
+    
+  %h3 Reviews
+  %ul#reviews
+    %li
+      - if @rating
+        %p#rating
+          Average score:
+          %strong #{@rating}/5
+      - else
+        %p#no-rating No ratings found.
+      
+      - if @reviews
+        %ul#book-reviews
+          - @reviews.each do |review|
+            %li #{review["body"]}
+      - else
+        No reviews found.

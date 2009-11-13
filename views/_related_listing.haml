@@ -1,0 +1,8 @@
+- editions ||= false
+%ul
+  - list.each do |item|
+    %li
+      -if editions
+        %a{:href => "/discovery/#{item[:isbn]}"} #{item[:edition]} by #{item[:publisher]} in #{item[:city]} (#{item[:year]})
+      -else
+        %a{:href => "/discovery/#{item[:isbn]}"}= item[:title]

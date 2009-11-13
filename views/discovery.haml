@@ -1,0 +1,30 @@
+%h2 Discovery
+
+#discovery
+  #book-info
+    #title= @title
+    #author= @author
+    #description= @description[0,700] + "..."
+    
+  .layer
+    #similar.discovery-block
+      %p Similar
+      = partial :related_listing, :locals => {:list => @similar}
+    #same-author.discovery-block
+      %p By the same author
+      = partial :related_listing, :locals => {:list => @same_author}
+      
+  .layer
+    #same-subjects.discovery-block
+      %p On the same subject
+      = partial :related_listing, :locals => {:list => @same_subjects}
+    #about-it.discovery-block
+      %p About the book
+      = partial :related_listing, :locals => {:list => @about_it}
+      
+  .layer
+    #other-editions.discovery-block
+      %p Other editions
+      = partial :related_listing, :locals => {:list => @other_editions, :editions => true}
+
+  

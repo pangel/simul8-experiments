@@ -1,0 +1,35 @@
+%h2 Searching with Worldcat
+
+%form#worldcat-search(method='get' action='/worldcat')
+  %input(type='text' name='query' value=@query)
+  %input(type='submit' value='search')
+
+- if @results
+  #results
+    %h3 
+      Results 
+      %span#about-results (first 20)
+  
+    - if @results.records.empty?
+      %p No results
+    - else
+      %ul#worldcat-results
+        - @results.records.each do |record|
+          %li
+            %a(href="/discovery/#{record[:isbn]}")= record[:title]
+- if @topic
+  #topic
+    %h3= @topic.text
+    %img#topic-thumb{:src => @topic.thumbnail}
+    %p#topic-description= @topic.description
+    - if @type == :author
+      %p Books written:
+      %ul#topic-books
+        - @topic.attributes.find { |att| att.property.id=="/book/author/works_written" }.values.each do |value|
+          %li= value.name
+    
+    - unless @topic.webpages.empty?  
+      %ul#topic-webpages
+        - @topic.webpages.each do |webpage|
+          %li
+            %a(href="#{webpage['url']}") Find on #{webpage["text"]}

@@ -1,0 +1,70 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+*:focus { outline: 0; }
+
+body { line-height: 1em; color: black; background: #fff; }
+
+ol, ul { list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: separate; border-spacing: 0; vertical-align: middle; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: "" ""; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; }
+
+img a { border: none; }
+
+body { font-family: Helvetica, Verdana, sans-serif; }
+
+#head { overflow: hidden; display: inline-block; padding-top: 30px; border-bottom: 5px solid #5F5F5F; }
+#head { display: block; }
+
+#container { width: 960px; margin-left: auto; margin-right: auto; }
+
+p, ul, span, a { font-size: 0.8em; }
+
+h1 { font-size: 1.8em; line-height: 1.5; }
+
+h2 { font-size: 1.4em; line-height: 1.5; margin-top: 0.7em; border-bottom: 3px solid #C3C3C3; }
+h2 span { font-size: 0.6em; }
+
+h3 { font-size: 1.2em; line-height: 1.5; margin-top: 0.7em; margin-bottom: 0.5em; border-bottom: 2px solid #D3D3D3; }
+
+#experiments li { float: left; }
+#experiments li a { display: block; margin-right: 1em; padding: 0.3em; font-size: 0.8em; text-decoration: none; color: red; line-height: 2; border-bottom: 5px solid #C3C3C3; }
+#experiments li a:hover { border-bottom-color: #000; }
+
+#about-results { font-size: 0.7em; }
+
+#content { margin-left: 30px; }
+
+#book-details { overflow: hidden; display: inline-block; margin-top: 2em; }
+#book-details { display: block; }
+#book-details #cover { float: left; padding: 15px; margin-right: 15px; }
+#book-details #title, #book-details #author, #book-details #wclink { line-height: 2; }
+#book-details #title { margin-top: 30px; }
+
+#related a { font-size: 1.2em; }
+
+#reviews #rating { font-size: 2em; font-weight: bold; color: #C3C3C3; }
+#reviews #no-rating { font-size: 1em; }
+#reviews #book-reviews { margin-top: 2em; font-size: 1em; line-height: 1.4; width: 480px; }
+#reviews #book-reviews li { padding-bottom: 1em; border-bottom: 1px solid #C3C3C3; margin-bottom: 1em; }
+
+#results { width: 50%; float: left; }
+
+#topic { width: 50%; float: right; }
+#topic #topic-description { line-height: 1.5; padding: 1em; }
+#topic img#topic-thumb { float: left; padding: 0em 1em 1em 0em; }
+
+#discovery #book-info { width: 80%; }
+#discovery #book-info #title { font-size: 1.4em; margin: 1em 0em; line-height: 1; }
+#discovery #book-info #author { font-size: 1em; margin-bottom: 1em; }
+#discovery #book-info #description { font-size: 0.8em; line-height: 1.4; margin-bottom: 1em; }
+#discovery .layer { width: 100%; margin-bottom: 2em; overflow: hidden; display: inline-block; }
+#discovery .layer { display: block; }
+#discovery .discovery-block { float: left; width: 30%; margin-right: 7%; }
+#discovery .discovery-block p { font-size: 0.8em; font-weight: bold; padding: 0.4em; background-color: #B0C3FF; margin-bottom: 0.6em; }
+#discovery .discovery-block ul li { margin-bottom: .3em; font-size: 1.2em; }
