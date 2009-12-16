@@ -1,5 +1,7 @@
-require 'sinatra'
-require 'environment'
+require 'vendor/gems/environment'
+Bundler.require_env
+
+require 'environment_local'
 
 configure do
   require 'helpers'

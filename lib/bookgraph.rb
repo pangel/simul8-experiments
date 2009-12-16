@@ -120,7 +120,6 @@ class << self;
   def feed_to_hash(feeds)
     feeds = [feeds] unless feeds.is_a? Array
     feeds.inject([]) { |acc,feed|
-      pp feed.code.class if feed["feed"].nil?
       entries = feed["feed"]["entry"]
       next(acc) unless entries
       entries = [entries] unless entries.is_a? Array
