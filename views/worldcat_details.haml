@@ -3,7 +3,7 @@
   - if @query
     %span
       = "..."
-      %a#back-to-results(href="/worldcat?query=#{@query}") Back to search results.
+      %a#back-to-results(href="worldcat?query=#{@query}") Back to search results.
 
 #content
   #book-details
@@ -19,7 +19,7 @@
         %ul#related-books
           - @related.each do |book|
             %li 
-              %a(href="/worldcat/#{book["asin"]}")= book["title"]
+              %a(href="worldcat/#{book["asin"]}")= book["title"]
       - else
         No books found.
     

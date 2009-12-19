@@ -1,6 +1,6 @@
 %h2 Searching with Worldcat
 
-%form#worldcat-search(method='get' action='/worldcat')
+%form#worldcat-search(method='get' action='worldcat')
   %input(type='text' name='query' value=@query)
   %input(type='submit' value='search')
 
@@ -16,7 +16,7 @@
       %ul#worldcat-results
         - @results.records.each do |record|
           %li
-            %a(href="/discovery/#{record[:isbn]}")= record[:title]
+            %a(href="discovery/#{record[:isbn]}")= record[:title]
 - if @topic
   #topic
     %h3= @topic.text
