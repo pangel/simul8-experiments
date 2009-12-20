@@ -19,7 +19,7 @@ helpers do
   include Helpers
 end
 
-get '/' do  haml :index; end
+get '/?' do  haml :index; end
 
 get '/worldcat' do
   session["query"] = @query = params["query"]
